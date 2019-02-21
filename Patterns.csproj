@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0F3F7C1-3EC6-4CC5-A000-E522FF024D2D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Patterns</RootNamespace>
+    <AssemblyName>Patterns</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BehavioralPatterns\ChainOfResponsibilityPattern\AbstractLogger.cs" />
+    <Compile Include="BehavioralPatterns\ChainOfResponsibilityPattern\ConsoleLogger.cs" />
+    <Compile Include="BehavioralPatterns\ChainOfResponsibilityPattern\DebugLogger.cs" />
+    <Compile Include="BehavioralPatterns\ChainOfResponsibilityPattern\ErrorLogger.cs" />
+    <Compile Include="BehavioralPatterns\ObserverDispatcherPattern\AbstractDispatcher.cs" />
+    <Compile Include="BehavioralPatterns\ObserverDispatcherPattern\DoubleSumObserver.cs" />
+    <Compile Include="BehavioralPatterns\ObserverDispatcherPattern\IEvent.cs" />
+    <Compile Include="BehavioralPatterns\ObserverDispatcherPattern\IObserver.cs" />
+    <Compile Include="BehavioralPatterns\ObserverDispatcherPattern\SumDispatcher.cs" />
+    <Compile Include="BehavioralPatterns\ObserverDispatcherPattern\IntSumObserver.cs" />
+    <Compile Include="BehavioralPatterns\ObserverDispatcherPattern\SumEvent.cs" />
+    <Compile Include="BehavioralPatterns\StatePattern\Context.cs" />
+    <Compile Include="BehavioralPatterns\StatePattern\StartState.cs" />
+    <Compile Include="BehavioralPatterns\StatePattern\State.cs" />
+    <Compile Include="BehavioralPatterns\StatePattern\StopState.cs" />
+    <Compile Include="CreationalPatterns\BuilderPattern\HttpRequest.cs" />
+    <Compile Include="CreationalPatterns\PrototypePattern\CustomerCache.cs" />
+    <Compile Include="CreationalPatterns\PrototypePattern\Customer.cs" />
+    <Compile Include="CreationalPatterns\PrototypePattern\ICache.cs" />
+    <Compile Include="StructuralPatterns\CriteriaPattern\AndCriteria.cs" />
+    <Compile Include="StructuralPatterns\CriteriaPattern\FemaleCriteria.cs" />
+    <Compile Include="StructuralPatterns\CriteriaPattern\ICriteria.cs" />
+    <Compile Include="StructuralPatterns\CriteriaPattern\MaleCriteria.cs" />
+    <Compile Include="StructuralPatterns\CriteriaPattern\OrCriteria.cs" />
+    <Compile Include="StructuralPatterns\CriteriaPattern\Person.cs" />
+    <Compile Include="StructuralPatterns\CriteriaPattern\TeenCriteria.cs" />
+    <Compile Include="CreationalPatterns\FactoryPattern\Car.cs" />
+    <Compile Include="CreationalPatterns\FactoryPattern\CarFactory.cs" />
+    <Compile Include="CreationalPatterns\FactoryPattern\GreenCar.cs" />
+    <Compile Include="CreationalPatterns\FactoryPattern\PinkCar.cs" />
+    <Compile Include="CreationalPatterns\FactoryPattern\RedCar.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CreationalPatterns\SingletonPattern\DeviceManager.cs" />
+    <Compile Include="StructuralPatterns\AdapterPattern\IAdvancedMediaPlayer.cs" />
+    <Compile Include="StructuralPatterns\AdapterPattern\AudioPlayer.cs" />
+    <Compile Include="StructuralPatterns\AdapterPattern\IMediaPlayer.cs" />
+    <Compile Include="StructuralPatterns\AdapterPattern\MediaAdapter.cs" />
+    <Compile Include="StructuralPatterns\AdapterPattern\Mp4Player.cs" />
+    <Compile Include="StructuralPatterns\AdapterPattern\VlcPlayer.cs" />
+    <Compile Include="StructuralPatterns\BridgePattern\Circle.cs" />
+    <Compile Include="StructuralPatterns\BridgePattern\DrawAPI.cs" />
+    <Compile Include="StructuralPatterns\BridgePattern\Rectangle.cs" />
+    <Compile Include="StructuralPatterns\BridgePattern\Shape.cs" />
+    <Compile Include="StructuralPatterns\DecoratorPattern\Circle.cs" />
+    <Compile Include="StructuralPatterns\DecoratorPattern\Rectangle.cs" />
+    <Compile Include="StructuralPatterns\DecoratorPattern\RedShapeDecorator.cs" />
+    <Compile Include="StructuralPatterns\DecoratorPattern\Shape.cs" />
+    <Compile Include="StructuralPatterns\DecoratorPattern\ShapeDecorator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
